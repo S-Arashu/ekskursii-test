@@ -1,0 +1,94 @@
+.button_outline {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--white);
+  max-width: 117px;
+  height: 25px;
+  border: 2px solid var(--orange);
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.button_outline:hover {
+  background-color: var(--orange);
+}
+
+.button_orange {
+  font-family: var(--font-family);
+  font-weight: 600;
+  color: var(--white);
+  text-transform: uppercase;
+  border-radius: 3px;
+  background-color: var(--orange);
+}
+
+.button_orange--large {
+  max-width: 193px;
+  height: 43px;
+  font-size: 18px;
+}
+
+.button_orange--small {
+  max-width: 112px;
+  height: 29px;
+  font-size: 14px;
+}
+
+.button_orange:hover {
+  color: var(--orange);
+  border: 2px solid var(--orange);
+  border-radius: 3px;
+}
+
+.button_blue {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 18px;
+  max-width: 200px;
+  height: 35px;
+  text-align: center;
+  color: var(--white);
+  text-transform: uppercase;
+  border-radius: 3px;
+  background-color: var(--light-blue);
+}
+
+.button_blue:hover {
+  color: var(--light-blue);
+  border: 1px solid var(--light-blue);
+  border-radius: 3px;
+}
+
+.button_pagination {
+  border-radius: 3px;
+  background-color: var(--orange);
+  fill: var(--white);
+}
+
+.button_pagination:hover {
+  fill: var(--orange);
+  background-color: var(--white);
+  fill: var(--orange);
+}
+
+.button__container {
+  width: auto;
+  display: flex;
+}
+
+.button_list-orange {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--orange);
+  text-transform: uppercase;
+}
+
+.button_list-white {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--white);
+  text-transform: uppercase;
+}
