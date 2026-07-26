@@ -1,5 +1,5 @@
 import createElement from "../../helpers/createElement";
-import createSvg from "../../helpers/createSvg";
+import { createSvg } from "../../helpers/createSvg";
 
 /**
  * Создает кнопку пагинации с SVG-иконкой

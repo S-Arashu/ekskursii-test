@@ -1,0 +1,90 @@
+.hero {
+  background:
+    linear-gradient(
+      270deg,
+      rgba(217, 217, 217, 0) 0%,
+      rgba(62, 62, 62, 0.3) 67.7%,
+      rgba(11, 11, 11, 0.45) 100%
+    ),
+    url("/src/assets/hero.png") no-repeat center / cover;
+  height: 75vh;
+}
+
+.hero__wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  padding-top: 10%;
+  margin: auto 0;
+  padding-top: 10%;
+}
+
+.hero__desc {
+  margin: auto;
+}
+
+.desc__title,
+.desc__info {
+  font-family: var(--font-family);
+  color: var(--white);
+  text-shadow: 1px 1px 3px rgba(61, 61, 61, 0.7);
+}
+
+.desc__title {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 143%;
+  margin-bottom: 4%;
+}
+
+.desc__info {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.desc__button-wrapper {
+  margin-top: 9%;
+  width: 29%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  cursor: pointer;
+}
+
+.arrow-path {
+  transition:
+    stroke-opacity 0.3s ease,
+    transform 0.3s ease;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.button_orange:hover + .desc__icon-block .arrow-path {
+  cursor: pointer;
+  animation: arrowWaveAndMove 1.2s infinite ease-in-out;
+}
+
+.button_orange:hover + .desc__icon-block .arrow-path._top {
+  animation-delay: 0s;
+}
+
+.button_orange:hover + .desc__icon-block .arrow-path._mid {
+  animation-delay: 0.15s;
+}
+
+.button_orange:hover + .desc__icon-block .arrow-path._bot {
+  animation-delay: 0.3s;
+}
+
+@keyframes arrowWaveAndMove {
+  0%,
+  100% {
+    stroke-opacity: 0.3;
+    /* transform: translateY(0); */
+  }
+  40% {
+    stroke-opacity: 1;
+    /* transform: translateY(3px); */
+  }
+}

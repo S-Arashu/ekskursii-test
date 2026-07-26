@@ -23,12 +23,14 @@
   text-transform: uppercase;
   border-radius: 3px;
   background-color: var(--orange);
+  cursor: pointer;
 }
 
 .button_orange--large {
-  max-width: 193px;
+  width: auto;
   height: 43px;
   font-size: 18px;
+  padding: 8px 35px;
 }
 
 .button_orange--small {

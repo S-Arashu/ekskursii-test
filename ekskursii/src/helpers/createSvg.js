@@ -17,7 +17,7 @@
 
 const svgCache = new Map();
 
-async function createSvg(url) {
+export async function createSvg(url) {
   if (svgCache.has(url)) {
     return svgCache.get(url).cloneNode(true);
   }
@@ -36,4 +36,21 @@ async function createSvg(url) {
   }
 }
 
-export default createSvg;
+/**
+ * Загружает SVG и вставляет его в родительский элемент
+ * @param {HTMLElement} parent - Родительский элемент
+ * @param {string} url - Путь к SVG-файлу
+ * @returns {Promise<SVGElement|null>} Промис с вставленным SVG или null
+ */
+export async function insertSvg(parent, url) {
+  if (!parent) {
+    console.error("insertSvg: parent не передан");
+    return null;
+  }
+
+  const svg = await createSvg(url);
+  if (svg) {
+    parent.append(svg);
+  }
+  return svg;
+}

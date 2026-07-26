@@ -1,5 +1,5 @@
 import createElement from "../../helpers/createElement";
-import createSvg from "../../helpers/createSvg";
+import { createSvg } from "../../helpers/createSvg";
 
 /**
  * Создает оранжевую кнопку-ссылка с иконкой для использования в списках

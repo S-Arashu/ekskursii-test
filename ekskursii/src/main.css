@@ -3,6 +3,7 @@
 @import url(./shared/lists/contacts/contactsList.css);
 
 @import url(./components/Header/Header.css);
+@import url(./components//Hero/Hero.css);
 
 :root {
   --dark-blue: #233849;

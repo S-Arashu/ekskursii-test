@@ -3,7 +3,7 @@ import ButtonListOrange from "../../shared/buttons/ButtonListOrange";
 import ButtonListWhite from "../../shared/buttons/ButtonListWhite";
 import ButtonOutline from "../../shared/buttons/ButtonOutline";
 import createCurrencyList from "../../shared/lists/currency/currencyList";
-import createSvg from "../../helpers/createSvg";
+import { insertSvg } from "../../helpers/createSvg";
 import createContactsList from "../../shared/lists/contacts/contactsList";
 
 function Header() {
@@ -50,7 +50,7 @@ function Header() {
 
           localStorage.setItem("currency", target.textContent);
           navButtons[i].firstChild.innerText = target.textContent;
-          createSvgForText(navButtons[i].firstChild);
+          insertSvg(navButtons[i].firstChild, "src/assets/arrow-down-icon.svg");
           block.classList.remove("currency-block_active");
           block.remove();
         });
@@ -85,12 +85,6 @@ function Header() {
         }
       });
     }
-  }
-
-  async function createSvgForText(parent) {
-    createSvg("src/assets/arrow-down-icon.svg").then((svgImg) => {
-      parent.append(svgImg);
-    });
   }
 
   return header;
