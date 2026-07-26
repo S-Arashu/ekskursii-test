@@ -3,11 +3,13 @@
   font-weight: 600;
   font-size: 14px;
   color: var(--white);
-  max-width: 117px;
+  width: auto;
   height: 25px;
   border: 2px solid var(--orange);
   border-radius: 3px;
   text-transform: uppercase;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .button_outline:hover {
@@ -39,6 +41,7 @@
   color: var(--orange);
   border: 2px solid var(--orange);
   border-radius: 3px;
+  background-color: transparent;
 }
 
 .button_blue {
@@ -75,6 +78,9 @@
 .button__container {
   width: auto;
   display: flex;
+  gap: 6px;
+  cursor: pointer;
+  padding: 24px 0;
 }
 
 .button_list-orange {
@@ -83,6 +89,11 @@
   font-size: 14px;
   color: var(--orange);
   text-transform: uppercase;
+  position: relative;
+}
+
+.button_list-orange svg {
+  stroke: var(--orange);
 }
 
 .button_list-white {
@@ -91,4 +102,9 @@
   font-size: 14px;
   color: var(--white);
   text-transform: uppercase;
+  position: relative;
+}
+
+.button__wrapper {
+  position: relative;
 }

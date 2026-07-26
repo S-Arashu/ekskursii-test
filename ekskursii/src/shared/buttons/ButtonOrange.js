@@ -17,9 +17,13 @@ function ButtonOrange(text, parent, size = "S") {
     sizeClass = "button_orange--small";
   }
 
-  const button = createElement("button", `button_orange ${sizeClass}`, parent);
+  const button = createElement(
+    "button",
+    `button_orange ${sizeClass}`,
+    parent,
+    text,
+  );
 
-  button.innerText = text;
   return button;
 }
 

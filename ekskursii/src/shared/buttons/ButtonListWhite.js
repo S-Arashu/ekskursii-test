@@ -15,10 +15,17 @@ import createSvg from "../../helpers/createSvg";
  */
 
 async function ButtonListWhite(text, parent, svg) {
-  const container = createElement("div", "button__container", parent);
-  const button = createElement("button", "button_list-white", container);
+  const container = createElement("div", "button__wrapper", parent);
+  const button = createElement(
+    "div",
+    "button__container button_list-white",
+    container,
+    text,
+  );
   const svgImg = await createSvg(svg);
   button.append(svgImg);
+
+  return container;
 }
 
 export default ButtonListWhite;

@@ -1,0 +1,34 @@
+.header {
+  background-color: var(--light-blue);
+  display: flex;
+}
+
+.header__img {
+  cursor: pointer;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 46px;
+}
+
+.nav__link {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--white);
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 24px 0;
+}
+
+.nav__link:hover {
+  color: var(--orange);
+}

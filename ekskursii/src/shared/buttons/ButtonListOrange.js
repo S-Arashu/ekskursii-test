@@ -15,10 +15,17 @@ import createSvg from "../../helpers/createSvg";
  */
 
 async function ButtonListOrange(text, parent, svg) {
-  const container = createElement("div", "button__container", parent);
-  const button = createElement("button", "button_list-orange", container);
+  const container = createElement("div", "button__wrapper", parent);
+  const button = createElement(
+    "div",
+    "button__container button_list-orange",
+    container,
+    text,
+  );
   const svgImg = await createSvg(svg);
   button.append(svgImg);
+
+  return container;
 }
 
 export default ButtonListOrange;

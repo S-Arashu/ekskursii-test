@@ -1,0 +1,79 @@
+.contacts-block {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  border-radius: 3px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.25);
+  background: var(--white);
+  width: 16vh;
+
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.contacts-block_active {
+  animation: listAppearing 0.5s forwards;
+}
+
+.contacts-block_leaving {
+  animation: listDisappearing 0.5s forwards;
+}
+
+.contacts-block__number-block,
+.contacts-block__socials-block {
+  display: flex;
+  padding: 15px;
+  gap: 7px;
+  align-items: center;
+}
+
+.socials-block__icon-block svg {
+  width: 60%;
+  height: 60%;
+  display: block;
+  flex-shrink: 0;
+}
+
+.number-block__icon-block svg path {
+  fill: var(--light-blue);
+}
+
+.number-block__phone {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--light-blue);
+  text-decoration: none;
+}
+
+.number-block__phone:hover {
+  text-decoration: underline;
+}
+
+.socials-block {
+  align-items: center;
+}
+
+.socials-block__icon-block {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--light-blue);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.socials-block__icon-block:hover {
+  opacity: 0.7;
+}
+
+.socials-block__icon-block svg {
+  stroke: var(--white);
+  display: block;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}

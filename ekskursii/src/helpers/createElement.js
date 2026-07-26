@@ -5,6 +5,7 @@
  * @param {string} nameForClass - CSS-классы через пробел (например, 'button button--primary')
  * @param {HTMLElement} elemForInsert - Родительский элемент, куда будет добавлен новый элемент
  * @param {Object} [attr={}] - Объект с атрибутами для элемента (например, { type: 'submit', id: 'form-id' })
+ * @param {string} text - Содержимое элемента
  * @returns {HTMLElement|null} Созданный DOM-элемент или null, если родитель не передан
  *
  * @example
@@ -16,7 +17,14 @@
  * const wrapper = createElement('div', 'wrapper container flex', parent);
  */
 
-function createElement(tag, nameForClass, elemForInsert, attr = {}) {
+function createElement(
+  tag,
+  nameForClass,
+  elemForInsert,
+  text = "",
+  attr = {},
+  insert = "append",
+) {
   if (!elemForInsert) {
     console.error("createElement: elemForInsert не передан или равен null");
     return null;
@@ -29,7 +37,10 @@ function createElement(tag, nameForClass, elemForInsert, attr = {}) {
       elem.setAttribute(key, value);
     }
   }
-  elemForInsert.append(elem);
+  if (text) {
+    elem.innerText = text;
+  }
+  elemForInsert[insert](elem);
   return elem;
 }
 
