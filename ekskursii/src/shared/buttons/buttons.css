@@ -34,9 +34,11 @@
 }
 
 .button_orange--small {
-  max-width: 112px;
   height: 29px;
   font-size: 14px;
+  text-transform: none;
+  padding: 0 10px;
+  font-weight: 400;
 }
 
 .button_orange:hover {

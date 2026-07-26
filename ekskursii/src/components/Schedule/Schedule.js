@@ -2,6 +2,7 @@ import createElement from "../../helpers/createElement";
 import Input from "../../shared/inputs/Input";
 import Select from "../../shared/inputs/Select";
 import ButtonBlue from "../../shared/buttons/ButtonBlue";
+import ScheduleCard from "./ScheduleCard";
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
 
@@ -55,6 +56,54 @@ const RU_LOCALE = {
     ],
   },
 };
+
+const SCHEDULE_DATA = [
+  {
+    date: "18.06.2026",
+    weekday: "чт.",
+    time: "18:00",
+    duration: "4 ч. 15 мин.",
+    priceAdult: 60,
+    priceChild: 55,
+    seatsLeft: 0,
+  },
+  {
+    date: "25.06.2026",
+    weekday: "чт.",
+    time: "18:00",
+    duration: "4 ч. 15 мин.",
+    priceAdult: 60,
+    priceChild: 55,
+    seatsLeft: 2,
+  },
+  {
+    date: "25.06.2026",
+    weekday: "чт.",
+    time: "18:00",
+    duration: "4 ч. 15 мин.",
+    priceAdult: 60,
+    priceChild: 55,
+    seatsLeft: 2,
+  },
+  {
+    date: "25.06.2026",
+    weekday: "чт.",
+    time: "18:00",
+    duration: "4 ч. 15 мин.",
+    priceAdult: 60,
+    priceChild: 55,
+    seatsLeft: 2,
+  },
+  {
+    date: "25.06.2026",
+    weekday: "чт.",
+    time: "18:00",
+    duration: "4 ч. 15 мин.",
+    priceAdult: 60,
+    priceChild: 55,
+    seatsLeft: 2,
+  },
+];
 
 function Schedule() {
   const section = createElement("section", "schedule", document.body);
@@ -154,6 +203,11 @@ function Schedule() {
     };
 
     console.log("Поиск экскурсий:", formData);
+  });
+
+  const cardsList = createElement("div", "schedule__cards", wrapper);
+  SCHEDULE_DATA.forEach((item) => {
+    ScheduleCard(item, cardsList);
   });
 
   return section;

@@ -3,6 +3,7 @@
 @import url(./shared/lists/contacts/contactsList.css);
 @import url(./shared/inputs/input.css);
 @import url(./shared/inputs/select.css);
+@import url(./components/Schedule/ScheduleCard.css);
 
 @import url(./components/Header/Header.css);
 @import url(./components/Hero/Hero.css);
