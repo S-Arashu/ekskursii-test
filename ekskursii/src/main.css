@@ -4,10 +4,13 @@
 @import url(./shared/inputs/input.css);
 @import url(./shared/inputs/select.css);
 @import url(./components/Schedule/ScheduleCard.css);
+@import url(./shared/rating/starRating.css);
+@import url(./components/Reviews/ReviewCard.css);
 
 @import url(./components/Header/Header.css);
 @import url(./components/Hero/Hero.css);
 @import url(./components/Schedule/Schedule.css);
+@import url(./components/Reviews/Reviews.css);
 
 :root {
   --dark-blue: #233849;

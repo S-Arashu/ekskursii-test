@@ -73,12 +73,17 @@
   border-radius: 3px;
   background-color: var(--orange);
   fill: var(--white);
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
 
 .button_pagination:hover {
-  fill: var(--orange);
   background-color: var(--white);
-  fill: var(--orange);
+}
+
+.button_pagination:hover svg {
+  stroke: var(--orange);
 }
 
 .button__container {

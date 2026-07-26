@@ -1,6 +1,7 @@
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Schedule from "./components/Schedule/Schedule";
+import Reviews from "./components/Reviews/Reviews";
 import "./main.css";
 
 const app = document.querySelector("#app");
@@ -11,6 +12,7 @@ if (!app) {
   app.append(Header());
   app.append(Hero());
   app.append(Schedule(app));
+  app.append(Reviews());
 }
 
 // Инициализируем логику

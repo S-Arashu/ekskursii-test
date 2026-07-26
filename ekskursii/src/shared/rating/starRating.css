@@ -1,0 +1,24 @@
+.star-rating {
+  display: flex;
+  gap: 4px;
+}
+
+.star-rating__star {
+  display: flex;
+  color: var(--light-grey);
+}
+
+.star-rating__star_filled {
+  color: var(--orange);
+}
+
+.star-rating__star svg {
+  width: 12px;
+  height: 12px;
+  display: block;
+}
+
+.star-rating__star svg path {
+  fill: currentColor;
+  stroke: currentColor;
+}
