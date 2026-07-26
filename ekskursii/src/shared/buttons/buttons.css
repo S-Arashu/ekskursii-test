@@ -57,12 +57,14 @@
   text-transform: uppercase;
   border-radius: 3px;
   background-color: var(--light-blue);
+  cursor: pointer;
 }
 
 .button_blue:hover {
   color: var(--light-blue);
   border: 1px solid var(--light-blue);
   border-radius: 3px;
+  background-color: transparent;
 }
 
 .button_pagination {

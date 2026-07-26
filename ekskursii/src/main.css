@@ -1,9 +1,12 @@
 @import url(./shared/buttons/buttons.css);
 @import url(./shared/lists/currency/currencyList.css);
 @import url(./shared/lists/contacts/contactsList.css);
+@import url(./shared/inputs/input.css);
+@import url(./shared/inputs/select.css);
 
 @import url(./components/Header/Header.css);
-@import url(./components//Hero/Hero.css);
+@import url(./components/Hero/Hero.css);
+@import url(./components/Schedule/Schedule.css);
 
 :root {
   --dark-blue: #233849;
