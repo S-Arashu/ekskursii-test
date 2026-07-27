@@ -65,12 +65,6 @@
   display: block;
 }
 
-.header__menu {
-  display: flex;
-  align-items: center;
-  gap: 46px;
-}
-
 .header__menu-inner {
   display: flex;
   align-items: center;

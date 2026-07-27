@@ -13,7 +13,7 @@ function ReviewCard(data, parent) {
     alt: name,
   });
 
-  const wrapper = createElement("div", "rewiew-card__wrapper", card);
+  const wrapper = createElement("div", "review-card__wrapper", card);
 
   const header = createElement("div", "review-card__header", wrapper);
 

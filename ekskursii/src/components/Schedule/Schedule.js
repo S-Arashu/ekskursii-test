@@ -203,8 +203,6 @@ function Schedule() {
       adults: adultsSelect.select.value,
       children: childrenSelect.select.value,
     };
-
-    console.log("Поиск экскурсий:", formData);
   });
 
   const cardsList = createElement("div", "schedule__cards", wrapper);
