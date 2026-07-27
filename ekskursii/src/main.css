@@ -29,6 +29,10 @@
   transition: all 0.3s ease-in-out;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @keyframes listAppearing {
   from {
     opacity: 0;
@@ -60,4 +64,40 @@ body {
   width: 1280px;
   height: auto;
   margin: auto;
+}
+
+@media (max-width: 1320px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1220px) {
+  .container {
+    max-width: 980px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 730px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 620px;
+  }
+}
+
+@media (max-width: 655px) {
+  .container {
+    max-width: 530px;
+  }
+}
+
+@media (max-width: 550px) {
+  .container {
+    max-width: 358px;
+  }
 }

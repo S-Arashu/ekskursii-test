@@ -27,33 +27,48 @@ function ScheduleCard(data, parent) {
     parent,
   );
 
-  const header = createElement("div", "schedule-card__header", card);
-  createElement("span", "schedule-card__date", header, `${date} (${weekday})`);
+  const leftSideSchedule = createElement(
+    "div",
+    "schedule-card__left-wrapper",
+    card,
+  );
+  const rightSideSchedule = createElement(
+    "div",
+    "schedule-card__right-wrapper",
+    card,
+  );
+  // const header = createElement("div", "schedule-card__header", card);
+  createElement(
+    "span",
+    "schedule-card__date",
+    leftSideSchedule,
+    `${date} (${weekday})`,
+  );
   createElement(
     "span",
     "schedule-card__price",
-    header,
-    `${priceAdult.toFixed(2)} BYN / ${priceChild.toFixed(2)} BYN`,
+    rightSideSchedule,
+    `${priceAdult.toFixed(2)}\u00A0BYN\u00A0/ ${priceChild.toFixed(2)}\u00A0BYN`,
   );
 
   createElement(
     "p",
     "schedule-card__time",
-    card,
+    leftSideSchedule,
     `Начало: ${time} ~ ${duration}`,
   );
 
-  const footer = createElement("div", "schedule-card__footer", card);
+  // const footer = createElement("div", "schedule-card__footer", card);
 
   if (isAvailable) {
     createElement(
       "span",
       "schedule-card__seats",
-      footer,
+      leftSideSchedule,
       `Осталось мест: ${seatsLeft}`,
     );
 
-    const button = ButtonOrange("Бронировать", footer, "S");
+    const button = ButtonOrange("Бронировать", rightSideSchedule, "S");
     button.type = "button";
     button.addEventListener("click", () => {
       // TODO: подключить открытие модалки бронирования
@@ -63,7 +78,7 @@ function ScheduleCard(data, parent) {
     createElement(
       "span",
       "schedule-card__seats schedule-card__seats_empty",
-      footer,
+      leftSideSchedule,
       "Нет мест",
     );
   }

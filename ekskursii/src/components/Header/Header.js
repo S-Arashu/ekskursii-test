@@ -22,12 +22,13 @@ function Header() {
   const headerNav = createElement("nav", "header__nav", wrapper);
 
   const menu = createElement("div", "header__menu", headerNav);
+  const menuInner = createElement("div", "header__menu-inner", menu);
 
   NAV.forEach((linkText) => {
-    createElement("a", "nav__link", menu, linkText);
+    createElement("a", "nav__link", menuInner, linkText);
   });
 
-  ButtonListWhite("Контакты", menu, "src/assets/arrow-down-icon.svg");
+  ButtonListWhite("Контакты", menuInner, "src/assets/arrow-down-icon.svg");
 
   const utils = createElement("div", "header__utils", headerNav);
 

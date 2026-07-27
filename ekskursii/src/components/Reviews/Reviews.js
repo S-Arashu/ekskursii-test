@@ -2,7 +2,9 @@ import createElement from "../../helpers/createElement";
 import ReviewCard from "./ReviewCard";
 import ButtonPagination from "../../shared/buttons/ButtonPagination";
 
-const CARDS_PER_VIEW = 2;
+// const CARDS_PER_VIEW = 2;
+
+const MOBILE_QUERY = "(max-width: 550px)";
 
 const REVIEWS_DATA = [
   {
@@ -52,17 +54,24 @@ function Reviews() {
 
   const cardsBlock = createElement("div", "reviews__cards", wrapper);
 
+  const mobileMedia = window.matchMedia(MOBILE_QUERY);
+  let cardsPerView = mobileMedia.matches ? 1 : 2;
   let currentIndex = 0;
 
   function renderCards() {
     cardsBlock.innerHTML = "";
-    for (let i = 0; i < CARDS_PER_VIEW; i += 1) {
+    for (let i = 0; i < cardsPerView; i += 1) {
       const item = REVIEWS_DATA[(currentIndex + i) % REVIEWS_DATA.length];
       ReviewCard(item, cardsBlock);
     }
   }
 
   renderCards();
+
+  mobileMedia.addEventListener("change", (event) => {
+    cardsPerView = event.matches ? 1 : 2;
+    renderCards();
+  });
 
   const pagination = createElement("div", "reviews__pagination", wrapper);
 

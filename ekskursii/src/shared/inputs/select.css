@@ -72,6 +72,12 @@
   stroke: var(--dark-grey);
 }
 
+@media (max-width: 1024px) {
+  .select__box {
+    max-width: inherit;
+  }
+}
+
 @media (max-width: 768px) {
   .select__wrapper {
     max-width: 100%;

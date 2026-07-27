@@ -8,6 +8,7 @@
     ),
     url("/src/assets/hero.png") no-repeat center / cover;
   height: 75vh;
+  background-position: top;
 }
 
 .hero__wrapper {
@@ -35,6 +36,7 @@
   font-size: 56px;
   line-height: 143%;
   margin-bottom: 4%;
+  letter-spacing: 0.9px;
 }
 
 .desc__info {
@@ -86,5 +88,48 @@
   40% {
     stroke-opacity: 1;
     /* transform: translateY(3px); */
+  }
+}
+
+@media (max-width: 768px) {
+  .desc__title {
+    font-size: 36px;
+  }
+
+  .hero__wrapper {
+    padding-top: 23%;
+  }
+
+  .desc__button-wrapper .button_orange--large {
+    padding: 8px 25px;
+  }
+}
+
+@media (max-width: 655px) {
+  .desc__button-wrapper .button_orange--large {
+    padding: 8px 13px;
+  }
+}
+
+@media (max-width: 550px) {
+  .hero {
+    height: 60.7vh;
+  }
+
+  .hero__wrapper {
+    padding-top: 30%;
+  }
+
+  .desc__title {
+    margin-bottom: 8.5%;
+  }
+
+  .desc__button-wrapper {
+    width: 53%;
+    margin-top: 18%;
+  }
+
+  .desc__button-wrapper .button_orange--large {
+    padding: 8px 32px;
   }
 }

@@ -10,13 +10,13 @@ function Hero() {
   const wrapper = createElement("div", "hero__wrapper", container);
 
   const contentBlock = createElement("div", "hero__desc", wrapper);
-  const title = createElement(
+  createElement(
     "h1",
     "desc__title",
     contentBlock,
     "Экскурсия Тысячелетний Брест и Брестская крепость ",
   );
-  const desc = createElement(
+  createElement(
     "p",
     "desc__info",
     contentBlock,
@@ -28,8 +28,20 @@ function Hero() {
     contentBlock,
   );
   const button = ButtonOrange("РАСПИСАНИЕ", buttonWrapper, "L");
+  button.type = "button";
+
   const iconBlock = createElement("div", "desc__icon-block", buttonWrapper);
   insertSvg(iconBlock, "src/assets/multiple-arrows.svg");
+
+  const scrollToSchedule = () => {
+    document.querySelector("#schedule")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
+  button.addEventListener("click", scrollToSchedule);
+  iconBlock.addEventListener("click", scrollToSchedule);
 
   return heroSection;
 }

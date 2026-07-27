@@ -98,6 +98,12 @@
   font-weight: 600 !important;
 }
 
+@media (max-width: 1024px) {
+  .input__box {
+    max-width: inherit;
+  }
+}
+
 @media (max-width: 768px) {
   .input__wrapper {
     max-width: 100%;

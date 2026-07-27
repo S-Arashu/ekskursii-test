@@ -38,7 +38,7 @@
 
 .footer__logo {
   height: 32px;
-  width: 26%;
+  width: 30%;
 }
 
 .footer__contacts {
@@ -54,6 +54,7 @@
   color: var(--white);
   text-transform: uppercase;
   margin: 0 0 4px;
+  letter-spacing: 0.5px;
 }
 
 .footer__phone {
@@ -62,6 +63,7 @@
   font-size: 14px;
   color: var(--white);
   text-decoration: none;
+  letter-spacing: 0.6px;
 }
 
 .footer__phone-icon {
@@ -118,6 +120,7 @@
   color: #fff;
   margin: 0;
   line-height: 1.5;
+  letter-spacing: 0.5px;
 }
 
 .footer__bottom {
@@ -130,6 +133,21 @@
   font-size: 14px;
   color: rgba(255, 255, 255, 0.7);
   margin: 0;
+  letter-spacing: 0.4px;
+}
+
+@media (max-width: 1024px) {
+  .footer__logo {
+    width: 20%;
+  }
+
+  .footer__top {
+    gap: 0;
+  }
+
+  .footer__col--legal {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -144,5 +162,33 @@
 
   .footer__col--legal {
     max-width: 100%;
+    padding: 0;
+  }
+
+  .footer__col--brand,
+  .footer__col--legal {
+    flex: 1 1 auto;
+  }
+}
+
+@media (max-width: 550px) {
+  .footer__top {
+    gap: 21px;
+  }
+
+  .footer__col--brand {
+    gap: 24px;
+  }
+
+  .footer__logo {
+    width: 50%;
+  }
+
+  .footer__copyright {
+    letter-spacing: 0.4px;
+  }
+
+  .footer__bottom-text {
+    line-height: 20px;
   }
 }

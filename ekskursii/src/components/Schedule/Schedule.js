@@ -106,7 +106,9 @@ const SCHEDULE_DATA = [
 ];
 
 function Schedule() {
-  const section = createElement("section", "schedule", document.body);
+  const section = createElement("section", "schedule", document.body, "", {
+    id: "schedule",
+  });
   const container = createElement("div", "container", section);
   const wrapper = createElement("div", "schedule__wrapper", container);
 
