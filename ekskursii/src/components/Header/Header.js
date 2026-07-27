@@ -9,12 +9,9 @@ import createContactsList from "../../shared/lists/contacts/contactsList";
 function Header() {
   const currentCur = localStorage.getItem("currency") || "BYN";
   const NAV = ["Программа", "Расписание", "Отзывы"];
-  const BUTTONS = ["Контакты", currentCur, "РУС"];
 
   const header = createElement("header", "header", document.body);
-
   const container = createElement("div", "container", header);
-
   const wrapper = createElement("div", "header__wrapper", container);
 
   createElement("img", "header__img", wrapper, "", {
@@ -24,19 +21,40 @@ function Header() {
 
   const headerNav = createElement("nav", "header__nav", wrapper);
 
+  const menu = createElement("div", "header__menu", headerNav);
+
   NAV.forEach((linkText) => {
-    createElement("a", "nav__link", headerNav, linkText);
+    createElement("a", "nav__link", menu, linkText);
   });
 
-  for (let i = 0; i < BUTTONS.length; i += 1) {
-    if (i === 0) {
-      ButtonListWhite(BUTTONS[i], headerNav, "src/assets/arrow-down-icon.svg");
-    } else {
-      ButtonListOrange(BUTTONS[i], headerNav, "src/assets/arrow-down-icon.svg");
-    }
-  }
+  ButtonListWhite("Контакты", menu, "src/assets/arrow-down-icon.svg");
 
-  ButtonOutline("Бронировать", headerNav);
+  const utils = createElement("div", "header__utils", headerNav);
+
+  ButtonListOrange(currentCur, utils, "src/assets/arrow-down-icon.svg");
+  ButtonListOrange("РУС", utils, "src/assets/arrow-down-icon.svg");
+  ButtonOutline("Бронировать", utils);
+
+  const burger = createElement("button", "header__burger", utils, "", {
+    type: "button",
+    "aria-label": "Открыть меню",
+  });
+  createElement("img", "header__burger-icon", burger, "", {
+    src: "/src/assets/burger-icon.png",
+    alt: "",
+  });
+
+  burger.addEventListener("click", () => {
+    menu.classList.toggle("header__menu_open");
+    burger.classList.toggle("header__burger_active");
+  });
+
+  menu.querySelectorAll(".nav__link").forEach((link) => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("header__menu_open");
+      burger.classList.remove("header__burger_active");
+    });
+  });
 
   const navButtons = document.querySelectorAll(".button__wrapper");
   for (let i = 0; i < navButtons.length; i += 1) {

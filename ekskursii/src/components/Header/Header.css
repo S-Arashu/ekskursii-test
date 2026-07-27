@@ -13,6 +13,18 @@
   align-items: center;
 }
 
+.header__menu {
+  display: flex;
+  align-items: center;
+  gap: 46px;
+}
+
+.header__utils {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .header__nav {
   display: flex;
   align-items: center;
@@ -31,4 +43,71 @@
 
 .nav__link:hover {
   color: var(--orange);
+}
+
+.header__burger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.header__burger-icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .header__burger {
+    display: flex;
+  }
+
+  .header__menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    background: var(--light-blue);
+    padding: 0 20px 20px;
+    z-index: 100;
+  }
+
+  .header__menu_open {
+    display: flex;
+  }
+
+  .header__menu .nav__link {
+    display: block;
+    width: 100%;
+    padding: 14px 0;
+  }
+
+  .header__menu .button__wrapper {
+    width: 100%;
+  }
+
+  .header__menu .button__container {
+    width: 100%;
+    padding: 14px 0;
+  }
+
+  .header__utils {
+    gap: 12px;
+  }
+
+  .header__utils .button_outline {
+    display: none;
+  }
 }
