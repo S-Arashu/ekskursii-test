@@ -37,7 +37,7 @@ function ScheduleCard(data, parent) {
     "schedule-card__right-wrapper",
     card,
   );
-  // const header = createElement("div", "schedule-card__header", card);
+
   createElement(
     "span",
     "schedule-card__date",
@@ -57,8 +57,6 @@ function ScheduleCard(data, parent) {
     leftSideSchedule,
     `Начало: ${time} ~ ${duration}`,
   );
-
-  // const footer = createElement("div", "schedule-card__footer", card);
 
   if (isAvailable) {
     createElement(

@@ -2,8 +2,6 @@ import createElement from "../../helpers/createElement";
 import ReviewCard from "./ReviewCard";
 import ButtonPagination from "../../shared/buttons/ButtonPagination";
 
-// const CARDS_PER_VIEW = 2;
-
 const MOBILE_QUERY = "(max-width: 550px)";
 
 const REVIEWS_DATA = [

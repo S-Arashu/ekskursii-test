@@ -16,6 +16,3 @@ if (!app) {
   app.append(Reviews());
   app.append(Footer());
 }
-
-// Инициализируем логику
-document.addEventListener("DOMContentLoaded", () => {});
