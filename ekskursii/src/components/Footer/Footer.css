@@ -1,0 +1,148 @@
+.footer {
+  background: var(--light-blue);
+  padding: 35px 0 0;
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  padding-bottom: 21px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer__col {
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+  align-items: flex-start;
+}
+
+.footer__col--brand {
+  flex: 1 1 280px;
+}
+
+.footer__col--legal {
+  flex: 1 1 560px;
+  max-width: 628px;
+  padding-top: 53px;
+  display: flex;
+  gap: 10px;
+}
+
+.footer__logo {
+  height: 32px;
+  width: 26%;
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.footer__contacts-title {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--white);
+  text-transform: uppercase;
+  margin: 0 0 4px;
+}
+
+.footer__phone {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.footer__phone-icon {
+  padding-right: 6px;
+}
+
+.footer__phone:hover {
+  text-decoration: underline;
+}
+
+.footer__socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.footer__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: var(--white);
+}
+
+.footer__social:hover {
+  opacity: 0.7;
+}
+
+.footer__social svg {
+  width: 60%;
+  height: 60%;
+  display: block;
+}
+
+.footer__social svg path {
+  fill: var(--light-blue);
+}
+
+.footer__license {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.footer__copyright {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.footer__bottom {
+  padding: 20px 0;
+}
+
+.footer__bottom-text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 0 0;
+  }
+
+  .footer__top {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer__col--legal {
+    max-width: 100%;
+  }
+}

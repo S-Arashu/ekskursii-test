@@ -2,6 +2,7 @@ import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Schedule from "./components/Schedule/Schedule";
 import Reviews from "./components/Reviews/Reviews";
+import Footer from "./components/Footer/Footer";
 import "./main.css";
 
 const app = document.querySelector("#app");
@@ -13,6 +14,7 @@ if (!app) {
   app.append(Hero());
   app.append(Schedule(app));
   app.append(Reviews());
+  app.append(Footer());
 }
 
 // Инициализируем логику
